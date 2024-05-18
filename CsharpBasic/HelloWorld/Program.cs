@@ -7,14 +7,14 @@ internal class Program
         GiftBox box = GiftBoxMaker("A 친구야 어떻게 지내고 있니", 150000);
         List<GiftBox> boxes = [box];
 
-        foreach (var b in boxes){
+        for (int i = 0; i < boxes.Count; i++) {
+            GiftBox b = boxes[i];
             Console.WriteLine($"{b.Letter} {b.Money}");
         }
 
         boxes.Clear();
 
-        for (int i = 0; i < boxes.Count; i++) {
-            var b = boxes[i];
+        foreach (var b in boxes){
             Console.WriteLine($"{b.Letter} {b.Money}");
         }
     }
