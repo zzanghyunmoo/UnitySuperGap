@@ -21,5 +21,14 @@ internal class Program
         foreach (var b in boxes){
             Console.WriteLine($"겉면: {b.FirstLetter}, 본면: {b.Letter} {b.Money} {b.Grade}");
         }
+
+        string numString = "십오";
+        int num = 0;
+        bool isParse = int.TryParse(numString, out num);
+        Console.WriteLine($"변경 여부: {isParse} 문자열 {numString} 값: {num}");
+
+        numString = "150";
+        isParse = int.TryParse(numString, out num);
+        Console.WriteLine($"변경 여부: {isParse} 문자열 {numString} 값: {num}");
     }
 }
