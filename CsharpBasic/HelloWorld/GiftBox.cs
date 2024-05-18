@@ -9,7 +9,8 @@ class GiftBox
     public readonly int Money;
     public ItemGrade Grade {get;set;}
 
-    GiftBox(char firstLetter, string letter, int money, ItemGrade grade) {
+    GiftBox(char firstLetter, string letter, int money, ItemGrade grade) 
+    {
         FirstLetter = firstLetter;
         Letter = letter;
         Money = money;
