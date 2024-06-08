@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-using System.Text;
-using Microsoft.VisualBasic;
+﻿using System.Text;
 
 namespace StringManipulation;
 
@@ -55,5 +53,22 @@ class Program
         sb.Append(string.Format("{0:0.00}", point));
         sb.Append("원이 남았습니다.");
         System.Console.WriteLine(sb.ToString());
+
+        System.Console.WriteLine($"Local: {DateTime.Now}");
+        System.Console.WriteLine($"UTC: {DateTime.UtcNow}");
+
+        var utc = DateTime.UtcNow;
+        System.Console.WriteLine($"toLocal {utc.ToLocalTime()}");
+        var local = DateTime.Now;
+        System.Console.WriteLine($"toUTC {local.ToUniversalTime()}");
+
+        var utcTimestamp = DateTimeOffset.UtcNow;
+        System.Console.WriteLine($"{utcTimestamp} utc: {utcTimestamp.UtcDateTime}, local: {utcTimestamp.LocalDateTime}");
+
+        System.Console.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+        System.Console.WriteLine(local.AddHours(3).AddMinutes(-5).ToString("yyyy-MM-dd HH:mm:ss"));
+
+        var ts = utc - utc.AddHours(-9);
+        Console.WriteLine(ts);
     }
 }
