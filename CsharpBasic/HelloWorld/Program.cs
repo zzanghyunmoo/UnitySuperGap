@@ -32,13 +32,23 @@ internal class Program
 
         int primitiveType = num;
         Console.WriteLine($"복사 후 변경 전: num: {num}, primitiveType: {primitiveType}");
-        primitiveType = 250;
+        SetMoneyPrimitiveType(out primitiveType);
         Console.WriteLine($"복사 후 변경 후: num: {num}, primitiveType: {primitiveType}");
         
 
         GiftBox referenceType = box;
         Console.WriteLine($"복사 후 변경 전: box.money: {box.Money}, referenceType: {referenceType.Money}");
-        referenceType.Money = 999999;
+        SetMoneyReferenceType(box);
         Console.WriteLine($"복사 후 변경 후: box.money: {box.Money}, referenceType: {referenceType.Money}");
+    }
+
+    static void SetMoneyPrimitiveType(out int result) 
+    {
+        result = 250;
+    }
+
+    static void SetMoneyReferenceType(GiftBox box) 
+    {
+        box.Money = 250;
     }
 }
