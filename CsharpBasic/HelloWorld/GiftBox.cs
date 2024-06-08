@@ -6,7 +6,7 @@ class GiftBox
 {
     public readonly char FirstLetter;
     public readonly string Letter;
-    public readonly int Money;
+    public int Money;
     public ItemGrade Grade {get;set;}
 
     GiftBox(char firstLetter, string letter, int money, ItemGrade grade) 

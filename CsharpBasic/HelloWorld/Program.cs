@@ -23,12 +23,22 @@ internal class Program
         }
 
         string numString = "십오";
-        int num = 0;
-        bool isParse = int.TryParse(numString, out num);
+        bool isParse = int.TryParse(numString, out int num);
         Console.WriteLine($"변경 여부: {isParse} 문자열 {numString} 값: {num}");
 
         numString = "150";
         isParse = int.TryParse(numString, out num);
         Console.WriteLine($"변경 여부: {isParse} 문자열 {numString} 값: {num}");
+
+        int primitiveType = num;
+        Console.WriteLine($"복사 후 변경 전: num: {num}, primitiveType: {primitiveType}");
+        primitiveType = 250;
+        Console.WriteLine($"복사 후 변경 후: num: {num}, primitiveType: {primitiveType}");
+        
+
+        GiftBox referenceType = box;
+        Console.WriteLine($"복사 후 변경 전: box.money: {box.Money}, referenceType: {referenceType.Money}");
+        referenceType.Money = 999999;
+        Console.WriteLine($"복사 후 변경 후: box.money: {box.Money}, referenceType: {referenceType.Money}");
     }
 }
