@@ -26,9 +26,9 @@ class Program
         letter = "여진,민재,호동";
         string[] splitLetter = letter.Split(",");
         Console.WriteLine($"split {letter}");
-        foreach (string s in splitLetter)
+        foreach (var splitted in splitLetter)
         {
-            Console.WriteLine(s);
+            Console.WriteLine(splitted);
         }
  
         letter = "Hi Friends!";
