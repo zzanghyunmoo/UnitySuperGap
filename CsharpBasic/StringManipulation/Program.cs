@@ -1,4 +1,6 @@
-﻿using System.Reflection.Metadata;
+﻿using System.Runtime.CompilerServices;
+using System.Text;
+using Microsoft.VisualBasic;
 
 namespace StringManipulation;
 
@@ -37,5 +39,21 @@ class Program
 
         string upperLetter = letter.ToUpper();
         Console.WriteLine(upperLetter);
+
+        var name = "륜희";
+        var point = 50000000.9289;
+        // plain string
+        Console.WriteLine(name + " 고객님, 적립금 " + point + "원이 남았습니다.");
+        // string.Format
+        Console.WriteLine(string.Format("{0} 고객님, 적립금 {1:C}원이 남았습니다.", name, string.Format("{0:0.00}", point)));
+        // string interpollation
+        Console.WriteLine($"{name} 고객님, 적립금 {Math.Round(point, 2)}원이 남았습니다.");
+        // stringbuilder
+        var sb = new StringBuilder();
+        sb.Append(name);
+        sb.Append(" 고객님, 적립금 ");
+        sb.Append(string.Format("{0:0.00}", point));
+        sb.Append("원이 남았습니다.");
+        System.Console.WriteLine(sb.ToString());
     }
 }
