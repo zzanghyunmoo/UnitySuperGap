@@ -16,6 +16,7 @@ class Program
         // TrimStart: 앞에 공백 제거
         // TrimEnd: 뒤에 공백 제거
         // Trim: 앞 뒤 공백 제거
+
         string trimmedLetter = replacedLetter.Trim();
         Console.WriteLine(trimmedLetter);
         

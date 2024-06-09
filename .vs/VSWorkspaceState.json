@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CsharpBasic",
+    "\\CsharpBasic\\BasicOperations",
+    "\\CsharpBasic\\HelloWorld"
   ],
+  "SelectedNode": "\\CsharpBasic",
   "PreviewInSolutionExplorer": false
 }
